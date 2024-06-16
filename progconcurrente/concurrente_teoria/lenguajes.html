@@ -25,6 +25,13 @@
 
     <!-- Main Stylesheet File -->
     <link href="stylesheets/style.css" rel="stylesheet" />
+
+    <!-- PrettyPrint CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet">
+
+    <!-- PrettyPrint JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+
   </head>
 
   <body>
@@ -61,6 +68,7 @@
                 <li><a href="lenguajes.html#python">Python</a></li>
                 <li><a href="lenguajes.html#c">C</a></li>
                 <li><a href="lenguajes.html#ejemplosLenguajes">Ejemplos</a></li>
+                <li><a href="lenguajes.html#ejemploComparativo">Ejemplo Comparativo</a></li>
               </ul>
             </li>
             <li class="menu-has-children"><a href="index.html#aplicaciones">Aplicaciones</a>
@@ -1596,7 +1604,284 @@
 
 
       </section><!-- #about -->
+      <section id="ejemploComparativo" style="margin-top: 50px;">
+        <div class="container">
+          <div class="text_cell_render border-box-sizing rendered_html">
+            <h2 class="title"><strong>Ejemplo Comparativo</strong></h2>
+            
+            <h2>Suma concurrente</h2>
+            <p>
+                Dado un arreglo de números, queremos sumar todos sus elementos. Utilizaremos programación concurrente para dividir el trabajo entre varios workers y sumar los resultados parciales.
+                Esta solución será implementada en tres lenguajes diferentes: Go, Elixir y Rust. Cada lenguaje tiene sus propias características y formas de manejar la concurrencia.
+                A continuación, se presenta el código para cada uno de estos lenguajes seguido de una tabla comparativa que detalla las diferentes secciones del código y cómo se implementan en cada lenguaje.
+            </p>
+            <h3>Go</h3>
+            <pre class="prettyprint"><code>
+    package main
 
+    import (
+    "fmt"
+    "sync"
+    )
+
+    func worker(arr []int, wg *sync.WaitGroup, resultChan chan int) {
+    defer wg.Done()
+    sum := 0
+    for _, num := range arr {
+      sum += num
+    }
+    resultChan <- sum
+    }
+
+    func main() {
+    arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+    numWorkers := 2
+    chunkSize := len(arr) / numWorkers
+    resultChan := make(chan int, numWorkers)
+    var wg sync.WaitGroup
+
+    for i := 0; i < numWorkers; i++ {
+      start := i * chunkSize
+      end := start + chunkSize
+      if i == numWorkers-1 {
+          end = len(arr)
+      }
+      wg.Add(1)
+      go worker(arr[start:end], &wg, resultChan)
+    }
+
+    wg.Wait()
+    close(resultChan)
+
+    totalSum := 0
+    for sum := range resultChan {
+      totalSum += sum
+    }
+
+    fmt.Printf("Total Sum: %d\n", totalSum)
+    }
+</code> </pre>
+
+            <h3>Elixir</h3>
+            <pre class="prettyprint">
+
+    defmodule ConcurrentSum do
+    def worker(pid, list) do
+    sum = Enum.sum(list)
+    send(pid, {self(), sum})
+    end
+
+    def start(list) do
+    num_workers = 2
+    chunk_size = div(length(list), num_workers)
+    pids = for i <- 1..num_workers do
+    start = (i - 1) * chunk_size + 1
+    finish = min(start + chunk_size - 1, length(list))
+    spawn(ConcurrentSum, :worker, [self(), Enum.slice(list, start - 1, finish - start + 1)])
+    end
+    receive_results(pids, 0)
+    end
+
+    defp receive_results([], acc) do
+    IO.puts("Total Sum: #{acc}")
+    end
+
+    defp receive_results(pids, acc) do
+    receive do
+    {_, sum} -> 
+      receive_results(tl(pids), acc + sum)
+    end
+    end
+    end
+
+    ConcurrentSum.start([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+                </pre>
+
+                <h3>Rust</h3>
+                <pre class="prettyprint">
+
+    use std::sync::mpsc;
+    use std::thread;
+
+    fn worker(arr: &[i32], tx: mpsc::Sender<i32>) {
+    let sum: i32 = arr.iter().sum();
+    tx.send(sum).expect("Could not send data!");
+    }
+
+    fn main() {
+    let arr = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let num_workers = 2;
+    let chunk_size = arr.len() / num_workers;
+
+    let (tx, rx) = mpsc::channel();
+    let mut handles = vec![];
+
+    for i in 0..num_workers {
+      let start = i * chunk_size;
+      let end = if i == num_workers - 1 {
+          arr.len()
+      } else {
+          start + chunk_size
+      };
+      let chunk = arr[start..end].to_vec();
+      let tx = tx.clone();
+      let handle = thread::spawn(move || {
+          worker(&chunk, tx);
+      });
+      handles.push(handle);
+    }
+
+    for handle in handles {
+      handle.join().expect("Thread couldn't join!");
+    }
+
+    let total_sum: i32 = rx.iter().take(num_workers).sum();
+    println!("Total Sum: {}", total_sum);
+    }
+            </pre>
+
+            <h2>Tabla Comparativa</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="narrow-col">Sección</th>
+                <th>Go</th>
+                <th>Elixir</th>
+                <th>Rust</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>División del Trabajo</td>
+                <td>
+                    <ul>
+                        <li>El arreglo se divide en partes iguales según el número de workers.</li>
+                        <li>Cada parte del arreglo se procesa concurrentemente por una goroutine (goroutines son ligeras y se gestionan por el runtime de Go).</li>
+                    </ul>
+                    <pre class="prettyprint">
+  for i := 0; i < numWorkers; i++ {
+      start := i * chunkSize
+      end := start + chunkSize
+      if i == numWorkers-1 {
+          end = len(arr)
+      }
+      wg.Add(1)
+      go worker(arr[start:end], &wg, resultChan)
+  }
+                    </pre>
+                </td>
+                <td>
+                    <ul>
+                        <li>El arreglo se divide en partes iguales según el número de workers.</li>
+                        <li>Cada parte del arreglo se procesa concurrentemente por un proceso ligero en Elixir.</li>
+                    </ul>
+                    <pre class="prettyprint">
+  pids = for i <- 1..num_workers do
+    start = (i - 1) * chunk_size + 1
+    finish = min(start + chunk_size - 1, length(list))
+    spawn(ConcurrentSum, :worker, [self(), Enum.slice(list, start - 1, finish - start + 1)])
+  end
+                    </pre>
+                </td>
+                <td>
+                    <ul>
+                        <li>El arreglo se divide en partes iguales según el número de workers.</li>
+                        <li>Cada parte del arreglo se procesa concurrentemente por un hilo.</li>
+                    </ul>
+                    <pre class="prettyprint">
+  for i in 0..num_workers {
+      let start = i * chunk_size;
+      let end = if i == num_workers - 1 { arr.len() } else { start + chunk_size };
+      let chunk = arr[start..end].to_vec();
+      let result = Arc::clone(&result);
+
+      let handle = thread::spawn(move || {
+          let sum: i32 = chunk.iter().sum();
+          let mut total = result.lock().unwrap();
+          *total += sum;
+      });
+      handles.push(handle);
+  }
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>Sincronización</td>
+                <td>
+                    <ul>
+                        <li>Se utiliza un sync.WaitGroup para esperar a que todas las goroutines terminen su trabajo.</li>
+                        <li>Los resultados parciales se envían a través de un canal (resultChan).</li>
+                    </ul>
+                    <pre class="prettyprint">
+  var wg sync.WaitGroup
+
+  wg.Wait()
+  close(resultChan)
+                    </pre>
+                </td>
+                <td>
+                    <ul>
+                        <li>Los procesos workers envían las sumas parciales al proceso principal mediante mensajes.</li>
+                    </ul>
+                    <pre class="prettyprint">
+  send(pid, {self(), sum})
+                    </pre>
+                </td>
+                <td>
+                    <ul>
+                        <li>Usa Arc (Atomic Reference Counted) para compartir el resultado entre los hilos.</li>
+                        <li>Usa Mutex para proteger el acceso concurrente al resultado compartido.</li>
+                    </ul>
+                    <pre class="prettyprint">
+  let result = Arc::new(Mutex::new(0));
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>Recolección de Resultados</td>
+                <td>
+                    <ul>
+                        <li>El canal resultChan se cierra cuando todos los workers han terminado.</li>
+                        <li>Se suma cada resultado parcial recibido del canal para obtener la suma total.</li>
+                    </ul>
+                    <pre class="prettyprint">
+  totalSum := 0
+  for sum := range resultChan {
+      totalSum += sum
+  }
+
+  fmt.Printf("Total Sum: %d\n", totalSum)
+                    </pre>
+                </td>
+                <td>
+                    <ul>
+                        <li>El proceso principal recibe los resultados parciales de cada worker y los suma.</li>
+                    </ul>
+                    <pre class="prettyprint">
+  receive do
+    {_, sum} -> 
+      receive_results(tl(pids), acc + sum)
+  end
+                    </pre>
+                </td>
+                <td>
+                    <ul>
+                        <li>Cada hilo añade su suma parcial al resultado total protegido por un Mutex.</li>
+                    </ul>
+                    <pre class="prettyprint">
+  for handle in handles {
+      handle.join().unwrap();
+  }
+
+  println!("Total Sum: {}", *result.lock().unwrap());
+                    </pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+          </div>
+        </div>
+      </section>
       
       <!-- #about -->
     </main>
@@ -1632,5 +1917,11 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        prettyPrint();
+      });
+    </script>
+    
   </body>
 </html>

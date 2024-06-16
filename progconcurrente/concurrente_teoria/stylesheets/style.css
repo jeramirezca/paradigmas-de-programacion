@@ -24,9 +24,84 @@ body {
   color: #666666;
   font-family: "Open Sans", sans-serif;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+pre {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.narrow-col {
+    width: 20%;
+}
+
+td code, pre code {
+    display: block;
+    white-space: pre;
+}
 
 a {
   color: #114434;
+}
+/* Estilos personalizados para PrettyPrint */
+
+/* Color para palabras clave */
+.pl-k {
+    color: #007bff; /* Color azul */
+}
+
+/* Color para cadenas */
+.pl-s {
+    color: #28a745; /* Color verde */
+}
+
+/* Color para números */
+.pl-c1 {
+    color: #dc3545; /* Color rojo */
+}
+
+/* Color para comentarios */
+.pl-c {
+    color: #6c757d; /* Color gris */
+    font-style: italic;
+}
+
+/* Fondo para el bloque de código */
+pre.prettyprint {
+    background-color: #f8f9fa; /* Color de fondo */
+    border: 1px solid #ced4da; /* Borde */
+    padding: 10px; /* Espaciado interno */
+    overflow-x: auto; /* Scroll horizontal */
+    white-space: pre-wrap; /* Ajuste de línea */
 }
 
 a:hover, a:active, a:focus {
