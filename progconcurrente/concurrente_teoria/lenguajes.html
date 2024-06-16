@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Programación Concurrente UNAL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicons -->
+    <link href="images/favicon.ico" rel="icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+
+    <!-- Main Stylesheet File -->
+    <link href="stylesheets/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="container">
+        <div id="logo" class="pull-left">
+          <a><img src="images/logo.png" class="resize" /></a>
+        </div>
+
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-has-children"><a href="index.html#hero">Programación concurrente</a>
+              <ul>
+                  <li><a href="index.html#definicion">¿Qué es?</a></li>
+                  <li><a href="index.html#filosofia">Filosofía del paradigma</a></li>
+                  <li><a href="index.html#historia">Historia</a></li>
+                  <li><a href="index.html#concurvsparal">Concurrencia vs paralelismo</a></li>
+                  <li><a href="index.html#conceptos">Conceptos</a></li>
+                  <li><a href="index.html#ventajas">Ventajas</a></li>
+                  <li><a href="index.html#desventajas">Desventajas</a></li>
+              </ul>
+            </li>
+      
+            <li class="menu-active menu-has-children"><a href="lenguajes.html">Lenguajes</a>
+              <ul>
+                <li><a href="lenguajes.html#elixir">Elixir</a></li>
+                <li><a href="lenguajes.html#ada">Ada</a></li>
+                <li><a href="lenguajes.html#rust">Rust</a></li>
+                <li><a href="lenguajes.html#erlang">Erlang</a></li>
+                <li><a href="lenguajes.html#go">Go</a></li>
+                <li><a href="lenguajes.html#haskel">Haskel</a></li>
+                <li><a href="lenguajes.html#crystal">Crystal</a></li>
+                <li><a href="lenguajes.html#javal">Java</a></li>
+                <li><a href="lenguajes.html#python">Python</a></li>
+                <li><a href="lenguajes.html#c">C</a></li>
+                <li><a href="lenguajes.html#ejemplosLenguajes">Ejemplos</a></li>
+              </ul>
+            </li>
+            <li class="menu-has-children"><a href="index.html#aplicaciones">Aplicaciones</a>
+              <ul>
+                <li><a href="index.html#aplicaciones">Aplicaciones generales</a></li>
+                <li><a href="index.html#aplicacionesReales">Aplicaciones reales</a></li>
+              </ul>
+            </li>
+            <li><a href="quiz/index.html">Quiz</a></li>
+            <li class="menu-has-children"><a href="references.html">Referencias</a>
+              <ul>
+                  <li><a href="references.html#referencias">Referencias</a></li>
+                  <li><a href="references.html#integrantes">Integrantes</a></li>
+                  <li><a href="references.html#presentacion">Presentaciones</a></li>
+                </ul>
+          </li>
+          </ul>
+        </nav><!-- #nav-menu-container -->
+      </div>
+    </header>
+    <!-- #header -->
+
+    <main id="main">
+      <br /><br />
+      <br /><br />
+      <section id="lenguajes" style="margin-top: 50px">
+        <div class="container">
+          <div class="text_cell_render border-box-sizing rendered_html">
+            <h2 class="title"><strong>Lenguajes</strong></h2>
+
+            <ul id="elixir">
+              <li><strong>Elixir</strong></li>
+            </ul>
+            <center>
+              <img src="images/elixir.png" width="150px" height="150px" />
+            </center>
+            <br />
+            Elixir es lenguaje de programación de propósito general,
+            concurrente; este lenguaje es funcional. Además está construido
+            sobre la MV de Erlang y aprovecha esto para construir sistemas
+            distribuidos y tolerantes a fallos con baja latencia. Es utilizado
+            para construcción de API's y para optimización en el desarrollo web.
+            Es utilizado en muchos frameworks como Hedwig, para la
+            implementación de chatbots en distintas redes sociales y demás.
+            Elixir presenta ejecución por hilos (referida como procesos) en un
+            ambiente en el cuál múltiples procesos pueden comunicarse unos con
+            otros vía mensajes.
+
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> Changelog, una plataforma de podcasts
+            para desarrolladores. <br /><br />
+
+            <ul id="ada">
+              <li><strong>Ada</strong></li>
+            </ul>
+            <center>
+              <img src="images/ada-coin.jpg" width="150px" height="150px" />
+            </center>
+            Ada es un lenguaje nacido de un proyecto en los 70s del ejército de
+            los Estados Unidos, el cual tenía como principal requisito la
+            seguridad, es decir, se debía tener un lenguaje con nula cantidad de
+            errores. El lenguaje es usado de forma amplia en la industria de las
+            infraestructuras de riesgo grande, como lo es sistemas de aviones,
+            trenes, tanques y misiles. Es fuertemente tipado, uno de los más
+            tipados, debido a la necesidad explicita de minimizar los errores.
+            Ha tenido relativamente pocas actualizaciones. Es uno de los
+            pioneros en programación orientado a objetos, lenguaje
+            multipropósito. Sincroniza las tareas por rendez vous.
+
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> Sistemas de planeación aérea y naval.
+            <br /><br />
+
+            <ul id="rust">
+              <li><strong>Rust</strong></li>
+            </ul>
+            <center>
+              <img src="images/rust.png" width="150px" height="150px" />
+            </center>
+            Rust es un lenguaje de programación compilado, de propósito general
+            y multiparadigma desarrollado por Mozilla y ha sido diseñado para
+            ser ‘un lenguaje seguro, concurrente y práctico’. Rust se enfoca
+            principalmente en seguridad, velocidad y concurrencia. Una de sus
+            principales características es que es posible arreglar bugs en
+            tiempo de ejecución. Usado en desarrollo web y embebido.
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> Partes del kernel de Linux, cuya
+            escritura es soportada desde octubre de 2022. <br /><br />
+
+            <ul id="erlang">
+              <li><strong>Erlang</strong></li>
+            </ul>
+            <center>
+              <img src="images/erlang.png" width="150px" height="150px" />
+            </center>
+            Erlang es un lenguaje de programación funcional de alto nivel,
+            diseñado para escribir aplicaciones concurrentes y distribuidas de
+            funcionamiento ininterrumpido. Erlang usa procesos concurrentes para
+            estructurar la aplicación. Estos procesos no comparten memoria y se
+            comunican de forma asincrónica mediante el paso de mensajes.
+            Utilizado en telecomunicaciones, e-commerce y mensajería
+            instantánea.
+
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> Lógica de negocio de aplicaciones como
+            WhatsApp. <br /><br />
+
+            <ul id="go">
+              <li><strong>GO</strong></li>
+            </ul>
+            <center>
+              <img src="images/go.png" width="150px" height="150px" />
+            </center>
+            GO Es un lenguaje de programación compilado, concurrente,
+            imperativo, estructurado, no orientado a objetos con recolector de
+            basura, soportado en diferentes tipos de sistemas. La concurrencia
+            en Go es diferente a los criterios de programación basados en
+            bloqueos como pthreads. Es fácil de aprender debido a su similitud
+            con los lenguajes más usados, es implementado en modelos de negocio
+            y manejo de servidores.
+
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> El código backend de Uber.<br /><br />
+
+            <ul id="haskell">
+              <li><strong>Haskell</strong></li>
+            </ul>
+            <center>
+              <img src="images/haskell.png" width="150px" height="150px" />
+            </center>
+            Haskell es un lenguaje polimórficamente tipificado, perezoso,
+            puramente funcional, muy diferente a la mayoría de los otros
+            lenguajes de programación. La concurrencia es "ligera", lo que
+            significa que tanto la creación de hilos como los gastos generales
+            de cambio de contexto son extremadamente bajos. La programación de
+            los hilos de Haskell se hace internamente y no hace uso de ningún
+            paquete de hilos suministrado por el sistema operativo.
+
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> Análisis de sintaxis en código alojado
+            en GitHub <br /><br />
+
+            <ul id="crystal">
+              <li><strong>Crystal</strong></li>
+            </ul>
+            <center>
+              <img src="images/crystal.png" width="150px" height="150px" />
+            </center>
+            Crystal es uno de los nuevos lenguajes en la escena. Aunque no tan
+            conocido como Rust, Elixir o Julia, tiene mucho que ofrecer. Iniciò
+            en 2012, y según describen sus creadores, sus características
+            principales son:
+            <br /><br />
+            - Sintaxis similar a Ruby<br />
+            - Estáticamente tipado<br />
+            - Compilado<br />
+            - Self-hosted (Crystal está escrito en… crystal)
+
+            <br /><br />
+            Crystal viene con una primitiva de concurrencia llamada fibras, que
+            son básicamente una versión más ligera de hilos. Las otras
+            primitivas de concurrencia son canales. Si ha hecho algo de Golang,
+            esta es básicamente la misma idea.
+
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> Servicios web de compañías como
+            Errordeck, GigSmart, Appmonitor, etc. <br /><br />
+
+            <ul id="java">
+              <li><strong>Java</strong></li>
+            </ul>
+            <center>
+              <img src="images/java.png" width="200px" height="150px" />
+            </center>
+
+            Java es un lenguaje de programación orientado a objetos creado en
+            1991 y publicado en 1995 por Sun Microsystem (adquirida por Oracle
+            en 2010), con la intención de que los programadores escribieran el
+            código solo una y lo ejecutarán en cualquier dispositivo. Java
+            permite realizar concurrencia con la librería threads. Además de que
+            cuenta con otras librerías que implementan métodos de planificación
+            y control de procesos (variables atómicas, semáforos, entre otros)
+            traídos del paquete concurrent.
+            <div class="mt-4">
+              <p>
+                Es altamente recomendable de utilizar hilos con estos lenguajes.
+                En cualquier caso, cuando, un lenguaje permite de hacer
+                programación concurrente, debe usarlo. Además, cuando uses estos
+                lenguajes, a menudo usarás hilos sin siquiera saberlo. De hecho,
+                hay muchas funciones incluidas en los lenguajes que crean un
+                hilo sin preguntarle al programador.
+              </p>
+            </div>
+
+            <b>Aplicaciones notables:</b> Innumerables. Desde servicios web
+            backend mediante Spring Boot hasta desarrollo de videojuegos con
+            LWJGL, la librería usada para escribir Minecraft.<br /><br />
+
+            <ul id="python">
+              <li><strong>python</strong></li>
+            </ul>
+            <center>
+              <img src="images/python.png" width="96px" height="96px" />
+            </center>
+
+            Python es el lenguaje más utilizado a nivel mundial (según revista
+            IEEE), es un lenguaje de sintaxis simple y cuyas aplicaciones cubren
+            una gran cantidad de áreas del conocimiento como lo son inteligencia
+            artificial, ciencia de datos, entre otras. En cuanto a programación
+            concurrente, cuenta con varias librerías para la implementación de
+            esta y su respectivo control, como lo son la librería "Thread" y
+            "Multiprocessing", que provee de herramientas como semáforos,
+            monitores, entre otros. Específicamente la librería "Thread" incluye
+            una interfaz de alto nivel orientada a objetos para trabajar con
+            concurrencia desde Python. Los objetos Thread se ejecutan al mismo
+            tiempo dentro del mismo proceso y comparten memoria.
+
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> El backend de Instagram. <br /><br />
+
+            <ul id="c">
+              <li><strong>C</strong></li>
+            </ul>
+            <center>
+              <img src="images/c.jpg" width="180px" height="96px" />
+            </center>
+            C es uno de los lenguajes más rápidos que existen puesto a que es un
+            lenguaje compilado, es altamente usado en el diseño y desarrollo de
+            los sistemas operativos que hoy en día se usan, además de que
+            facilita el uso de memoria dinámica y muchas otras características.
+            En cuanto a programación concurrente, usa la librería pthread.h para
+            la creación de hlos y métodos de control muy básicos como la
+            implementación de un semáforo.
+
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> El kernel de Linux y otros lenguajes
+            como Python y C++. <br /><br />
+
+            <ul id="c++">
+              <li><strong>C++</strong></li>
+            </ul>
+            <center>
+              <img src="images/cpp.png" width="96px" height="96px" />
+            </center>
+            <br />
+            Fue diseñado a mediados de los años 80 por el danés Bjarne
+            Stroustrup. Su intención fue la de extender el lenguaje de
+            programación C para que tuviese los mecanismos necesarios para
+            manipular objetos. Por lo tanto C++ contiene los paradigmas de la
+            programación estructurada y orientada a objetos. Se puede usar una
+            librería thread que es básicamente una sección de código
+            independiente que el procesador puede ejecutar de forma concurrente
+            junto a otros threads o hilos de ejecución.
+
+            <br /><br />
+
+            <b>Aplicaciones notables:</b> Motores gráficos como Source de Valve,
+            usado en videojuegos como Half-Life y Counter-Strike.<br /><br />
+          </div>
+        </div>
+      </section>
+      <section id="ejemplosLenguajes" style="margin-top:50px;">
+        <div class="container">
+          <div class="text_cell_render border-box-sizing rendered_html">
+            <h2 class="title"><strong>Ejemplos Lenguages</strong></h2>
+  
+              <ul>
+                <li>Ejemplo en <strong>python</strong>: Este es un pequeño ejemplo con el fin de ilustrar como podemos
+                  lanzar un hilo en python</li>
+              </ul>
+  
+              <div class="highlight highlight-source-python">
+                <pre><span class="pl-k">from</span> threading <span class="pl-k">import</span> Thread
+  <span class="pl-k">import</span> time
+  
+  <span class="pl-k">def</span> <span class="pl-en">say_hello</span>(<span class="pl-smi">name</span>):
+      <span class="pl-c1">print</span> (name, <span class="pl-s"><span class="pl-pds">"</span>Hola<span class="pl-pds">"</span></span>)
+  
+  t <span class="pl-k">=</span> Thread(<span class="pl-v">target</span><span class="pl-k">=</span>say_hello, <span class="pl-v">args</span><span class="pl-k">=</span>(<span class="pl-s"><span class="pl-pds">"</span>world<span class="pl-pds">"</span></span>,))
+  t.start()
+  t.join()</pre>
+              </div>
+  
+              <p><strong>Ejecucion:</strong> python archivo.py</p>
+  
+              <blockquote>
+                <p>('world', 'Hola')</p>
+              </blockquote>
+  
+              <ul>
+                <li>Ejemplo en <em>GO</em>: En este ejemplo podemos visualizar que los hilos no se ejecutan en el orden
+                  ascedente si no esto lo decide el scheduler del sistema operativo</li>
+              </ul>
+  
+              <div class="highlight highlight-source-go">
+                <pre><span class="pl-k">package</span> main
+  
+  <span class="pl-k">import</span> (
+      <span class="pl-s"><span class="pl-pds">"</span>fmt<span class="pl-pds">"</span></span>
+      <span class="pl-s"><span class="pl-pds">"</span>time<span class="pl-pds">"</span></span>
+  )
+  
+  <span class="pl-k">const</span> <span class="pl-v">FINAL</span> = <span class="pl-c1">100</span> * time.<span class="pl-smi">Millisecond</span>
+  
+  <span class="pl-k">func</span> <span class="pl-en">saluda</span>(<span class="pl-v">i</span> <span class="pl-v">int</span>) {
+      time.<span class="pl-c1">Sleep</span>(<span class="pl-c1">10</span> * time.<span class="pl-c1">Duration</span>(i%<span class="pl-c1">5</span>) * time.<span class="pl-smi">Millisecond</span> )
+      fmt.<span class="pl-c1">Println</span>(<span class="pl-s"><span class="pl-pds">"</span>Hola a todos<span class="pl-pds">"</span></span>, i)
+  }
+  
+  <span class="pl-k">func</span> <span class="pl-en">main</span>() {
+      <span class="pl-k">for</span> <span class="pl-smi">i</span> <span class="pl-k">:=</span> <span class="pl-c1">1</span>; i &lt;= <span class="pl-c1">6</span>; i++ {
+          <span class="pl-c">// Lanzamos nuestro hilo solo anteponiendo la palabra go a la funcion</span>
+          <span class="pl-k">go</span> <span class="pl-c1">saluda</span>(i)
+      }
+      time.<span class="pl-c1">Sleep</span>(FINAL)
+  }</pre>
+              </div>
+  
+              <p><strong>Ejecucion:</strong> go run archivo.go</p>
+  
+              <blockquote>
+                <p>Hola a todos 5</p>
+  
+                <p>Hola a todos 6</p>
+  
+                <p>Hola a todos 1</p>
+  
+                <p>Hola a todos 2</p>
+  
+                <p>Hola a todos 3</p>
+  
+                <p>Hola a todos 4</p>
+              </blockquote>
+  
+              <ul>
+                <li>Ejemplos semaforo en <strong>C</strong>: El siguiente codigo fuente solo sirve sistemas operativos
+                  basado en unix.</li>
+              </ul>
+  
+              <div class="highlight highlight-source-c">
+                <pre>#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>stdlib.h<span class="pl-pds">&gt;</span></span>
+  #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>stdio.h<span class="pl-pds">&gt;</span></span>
+  #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>pthread.h<span class="pl-pds">&gt;</span></span>
+  #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>unistd.h<span class="pl-pds">&gt;</span></span>
+  #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>sys/types.h<span class="pl-pds">&gt;</span></span>
+  #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>fcntl.h<span class="pl-pds">&gt;</span></span>
+  #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>sys/stat.h<span class="pl-pds">&gt;</span></span>
+  #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>semaphore.h<span class="pl-pds">&gt;</span></span>
+  
+  #<span class="pl-k">define</span> <span class="pl-en">NUMHILOS</span> <span class="pl-c1">5</span>
+  
+  <span class="pl-c1">sem_t</span> *semaforo;
+  <span class="pl-k">int</span> error, i, parametro, a;
+  <span class="pl-k">char</span> t;
+  <span class="pl-k">void</span> *z;
+  
+  <span class="pl-k">void</span> *<span class="pl-en">fun</span>(<span class="pl-k">void</span> *ap )
+  {
+      <span class="pl-c1">sem_t</span> *sem = ap;
+      <span class="pl-k">char</span> t;
+      <span class="pl-c1">sem_wait</span>( sem ); <span class="pl-c">// Bloqueamos seccion critica</span>
+      <span class="pl-c1">printf</span>( <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span> Hilo ENTRO a seccion critica<span class="pl-pds">"</span></span> );
+      <span class="pl-c1">fflush</span>( stdout );
+      <span class="pl-c1">sleep</span>( <span class="pl-c1">1</span> );
+      <span class="pl-c1">printf</span>( <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span> Hilo SALIO a seccion critica<span class="pl-cce">\n\n</span><span class="pl-pds">"</span></span> );
+      <span class="pl-c1">fflush</span>( stdout );
+      <span class="pl-c1">sem_post</span>( sem ); <span class="pl-c">// Desbloqueamos seccion critica</span>
+  }
+  
+  <span class="pl-k">int</span> <span class="pl-en">main</span>()
+  {
+      <span class="pl-c">// Creamos nuestro semaforo</span>
+      semaforo = <span class="pl-c1">sem_open</span>( <span class="pl-s"><span class="pl-pds">"</span>sema<span class="pl-pds">"</span></span>, O_CREAT, <span class="pl-c1">0666</span>, <span class="pl-c1">1</span> );
+  
+      <span class="pl-c">// Declaramos el descritor de los hilos</span>
+      <span class="pl-c1">pthread_t</span> hilos[NUMHILOS];
+  
+      <span class="pl-c">// Creamos nuestros hilos</span>
+      <span class="pl-k">for</span>( i = <span class="pl-c1">0</span>; i &lt; NUMHILOS; i++ )
+          <span class="pl-c1">pthread_create</span>( &amp;hilos[i], <span class="pl-c1">NULL</span>, (<span class="pl-k">void</span> *)fun, semaforo );
+  
+      <span class="pl-c">// Esperamos a que nuestro hilos de ejecutan antes de terminar el programa</span>
+      <span class="pl-k">for</span>( i = <span class="pl-c1">0</span>; i &lt; NUMHILOS; i++ )
+          <span class="pl-c1">pthread_join</span>( hilos[i], (<span class="pl-k">void</span> *)&amp;z );
+  
+      <span class="pl-c">// Destruimos nuestro semaforo</span>
+      <span class="pl-c1">sem_unlink</span>( <span class="pl-s"><span class="pl-pds">"</span>sema<span class="pl-pds">"</span></span> );
+      <span class="pl-c1">sem_close</span>( semaforo );
+      <span class="pl-k">return</span> <span class="pl-c1">0</span>;
+  }</pre>
+              </div>
+  
+              <p>Compilamos: <strong>gcc semaforo.c -o semaforo -pthread</strong></p>
+  
+              <p>Ejecutamos: <strong>./semaforo</strong></p>
+  
+              <blockquote>
+                <p>Hilo ENTRO a sección critica</p>
+  
+                <p>Hilo SALIO a sección critica</p>
+  
+                <p>Hilo ENTRO a sección critica</p>
+  
+                <p>Hilo SALIO a sección critica</p>
+  
+                <p>Hilo ENTRO a sección critica</p>
+  
+                <p>Hilo SALIO a sección critica</p>
+              </blockquote>
+  
+              <ul>
+                <li>Ejemplo en <strong>C++</strong>: Calculamos el numero pi con 4 hilos con la ayuda de <a
+                    href="https://es.wikipedia.org/wiki/Serie_de_Leibniz">Serie de Leibniz</a> </li>
+              </ul>
+  
+              <div class="highlight highlight-source-c++">
+                <pre>#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
+  #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>thread<span class="pl-pds">&gt;</span></span>
+  #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>vector<span class="pl-pds">&gt;</span></span>
+  
+  <span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
+  vector&lt;<span class="pl-k">double</span>&gt; <span class="pl-en">valorCal</span>( <span class="pl-c1">4</span>, <span class="pl-c1">0.0</span> ), limites;
+  
+  <span class="pl-k">void</span> <span class="pl-en">calcularIntervalo</span> (<span class="pl-k">int</span> index)
+  {
+      <span class="pl-k">for</span> (<span class="pl-k">int</span> i = limites[<span class="pl-c1">index</span>]; i &lt; limites[<span class="pl-c1">index</span>+<span class="pl-c1">1</span>]; i++)
+          <span class="pl-k">if</span> (i % <span class="pl-c1">2</span> == <span class="pl-c1">0</span>)
+              valorCal[<span class="pl-c1">index</span>] += <span class="pl-c1">1.0</span>/(<span class="pl-c1">2</span>*i+<span class="pl-c1">1</span>);
+          <span class="pl-k">else</span>
+              valorCal[<span class="pl-c1">index</span>] -= <span class="pl-c1">1.0</span>/(<span class="pl-c1">2</span>*i+<span class="pl-c1">1</span>);
+  }
+  
+  <span class="pl-k">int</span> <span class="pl-en">main</span>()
+  {
+      <span class="pl-c">// Creamos nuestro limites</span>
+      <span class="pl-k">int</span> numeroSerie = <span class="pl-c1">1000000000</span>;
+      limites.<span class="pl-c1">push_back</span>( <span class="pl-c1">0</span> );
+      limites.<span class="pl-c1">push_back</span>( numeroSerie/<span class="pl-c1">4</span> );
+      limites.<span class="pl-c1">push_back</span>( numeroSerie/<span class="pl-c1">2</span> );
+      limites.<span class="pl-c1">push_back</span>( <span class="pl-c1">3</span>*(numeroSerie/<span class="pl-c1">4</span>) );
+      limites.<span class="pl-c1">push_back</span>( numeroSerie );
+  
+      <span class="pl-c">// Creamos a hilos</span>
+      thread hilos[<span class="pl-c1">4</span>];
+  
+      <span class="pl-c">// Inicializamos nuestros hilos</span>
+      <span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">4</span>; i++)
+          hilos[i] = <span class="pl-c1">thread</span>( calcularIntervalo, i );
+  
+      <span class="pl-c">// Esperemos a que nuestros hilos terminen</span>
+      <span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">4</span>; i++)
+          hilos[i].<span class="pl-c1">join</span>();
+  
+      <span class="pl-c">// Calculamos nuestra respuesta</span>
+      <span class="pl-k">double</span> answer = <span class="pl-c1">0</span>;
+      <span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">4</span>; i++)
+          answer += valorCal[i];
+      answer *= <span class="pl-c1">4</span>;
+      <span class="pl-c1">printf</span>( <span class="pl-s"><span class="pl-pds">"</span>EL valor de pi es:<span class="pl-cce">\t</span><span class="pl-c1">%.20f</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span>, answer );
+      <span class="pl-k">return</span> <span class="pl-c1">0</span>;
+  }</pre>
+              </div>
+  
+              <p>Compilar: <strong>g++ pi.cpp -o pi -std=c++11 -pthread</strong></p>
+  
+              <p>Ejecutar: <strong>./pi</strong></p>
+  
+              <blockquote>
+                <p>EL valor de pi es: 3.14159265258921038821</p>
+              </blockquote>
+  
+              <ul>
+                <li>Ejemplo en <strong>Java</strong>:</li>
+              </ul>
+              <p>Un grupo de personas trata de ir de una isla(Oahu) a la otra(Molokai) con un solo bote.</p>
+              <p><img src="https://s1-ssl.dmcdn.net/hjNxe/x240-XWg.jpg" alt=""></p>
+  
+              <p>Reglas:</p>
+              <ul>
+                <li>Cada persona es un hilo.</li>
+                <li>La persona puede ser un adulto o un niño.</li>
+                <li>Pueden ir dos niños en el bote o solo un adulto.</li>
+                <li>El bote necesita como mínimo un piloto./li>
+                <li>las personas solo se pueden comunicar con los que estén en la misma isla.</li>
+                <li>Siempre hay mínimo dos niños.</li>
+              </ul>
+  
+              <p>El principal objetivo del ejemplo es mostrar la sincronización de los hilos, la solución al problema
+                consiste en llevar dos niños
+                a Molokai, hacer que uno se devuelva con el bote, subir un adulto en oahu, cuando este llegue a Molokai se
+                devolverá el otro niño
+                que estaba ahí, y en Oahu se volverán a subir dos niños, este proceso se repetirá hasta que todas las
+                personas estén en Oahu,
+                hay que tener en cuenta que no hay algo como unidad principal que controle cuando pasará cada persona,
+                cada hilo deberá saber cuando
+                ejecutar sus instrucciones dependiendo de la sincronización con los otros</p>
+              <pre class="prettyprint">
+  
+  import java.util.concurrent.Semaphore;
+  
+  //extiende de thread y sobreescribe run sin nada
+  public class Persona extends Thread{
+  
+    int Tamano;
+    String ubicacion;
+    static String boatUbication="Oahu";
+    public static String getBoatUbication() {
+      return boatUbication;
+    }
+  
+    public static void setBoatUbication(String boatUbication) {
+      Persona.boatUbication = boatUbication;
+    }
+  
+    public Persona(int tamano, String ubicacion) {
+      super();
+      this.Tamano = tamano;
+      this.ubicacion = ubicacion;
+    }
+  
+    @Override
+      public void run() {
+  
+    }
+  
+  
+  
+  }
+  
+  
+  
+  import java.util.logging.Level;
+  import java.util.logging.Logger;
+  
+  //extiende de persona
+  public class Adult extends Persona {
+    public Adult() {
+      super(2, "Oahu");
+    }
+    //sobreescribe run
+    @Override
+      public void run() {
+      //mientras no hayan pasado todas las personas
+      while(Boat.ContMolokai < Boat.ContTotalPersonas){
+       try {
+         //semaforo encargado de que un niño y adulto no luchen por el bote
+         Boat.classExclus.acquire();
+               if (this.ubicacion.equals("Oahu") && boatUbication.equals(this.ubicacion) && Boat.ContChildBack%2!=0 && Boat.ContAdultOahu != 0){
+                 //si ve que puede pasar lo hace, adquiere las dos posiciones del bote
+                 Boat.available.acquire();
+                 Boat.available.acquire();
+                 Boat.bg.AdultRowToMolokai();
+                 this.ubicacion="Molokai";
+                 boatUbication="Molokai";
+                 Boat.ContMolokai++;
+                  Boat.ContOahu--;
+                  Boat.ContAdultOahu--;
+                  //al llegar libera las dos posiciones del bote
+                 Boat.available.release();
+                 Boat.available.release();
+               }
+  
+               Boat.classExclus.release();
+           } catch (InterruptedException ex) {
+               Logger.getLogger(Child.class.getName()).log(Level.SEVERE, null, ex);
+           }
+    }
+    }
+  }
+  
+  
+  import java.util.concurrent.Semaphore;
+  import java.util.logging.Level;
+  import java.util.logging.Logger;
+  
+  //parecida a Adult
+  public class Child extends Persona {
+    public Child() {
+      super(1, "Oahu");
+    }
+    @Override
+      public void run() {
+      while(Boat.ContMolokai < Boat.ContTotalPersonas ){
+       try {
+         Boat.classExclus.acquire();
+               if (this.ubicacion.equals("Oahu") && boatUbication.equals(this.ubicacion) && (Boat.ContChildBack%2==0 || Boat.ContAdultOahu == 0) ){
+                 //a diferencia del adulto el niño solo adquiere una posicion del bote
+                 Boat.available.acquire();
+                 Boat.UbicacionDispon--;
+                 if (Boat.UbicacionDispon==1) Boat.bg.ChildRowToMolokai();
+                 this.ubicacion="Molokai";
+                 Boat.ContMolokai++;
+                 Boat.ContOahu--;
+                 if(Boat.UbicacionDispon==0){
+                   Boat.bg.ChildRideToMolokai();
+                   boatUbication="Molokai";
+                   Boat.UbicacionDispon=2;
+                 }
+                 Boat.available.release();
+               }
+               //parte de la seccion critica encargada de que el niño regrese desde Molokai a Oahu
+                 if (this.ubicacion.equals("Molokai") && boatUbication.equals(this.ubicacion) && (Boat.ContMolokai < Boat.ContTotalPersonas ) ){
+                   //para evitar que se regresen dos niños el niño adquiere las dos posiciones
+                   //del bote
+                   Boat.available.acquire();
+                   Boat.available.acquire();
+                   Boat.bg.ChildRowToOahu();
+                     this.ubicacion="Oahu";
+                     boatUbication="Oahu";
+                     Boat.ContMolokai--;
+                     Boat.ContOahu++;
+                     Boat.ContChildBack++;
+                     //llega y libera las dos posiciones
+                     Boat.available.release();
+                     Boat.available.release();
+                 }
+  
+                 Boat.classExclus.release();
+           } catch (InterruptedException ex) {
+               Logger.getLogger(Child.class.getName()).log(Level.SEVERE, null, ex);
+           }
+  
+      }
+    }
+  
+  }
+  
+  
+  
+  import java.util.Scanner;
+  import java.util.concurrent.Semaphore;
+  import java.util.LinkedList;
+  
+  public class Boat {
+    //se instancian los dos semaforos
+    public static Semaphore available = new Semaphore(2, true);
+    public static Semaphore classExclus = new Semaphore(1, true);
+    static Scanner sc = new Scanner(System.in);
+    //contadores para la comunicacion
+    static int childrenTot=0;
+    static int adultTot=0;
+    static int ContChilds=0;
+    static int ContAdults=0;
+    static int ContTotalPersonas=0;
+    static int ContOahu=0;
+    static int ContMolokai=0;
+    static int ContAdultOahu=0;
+    static int UbicacionDispon=2;
+    static int ContChildBack=0;
+  
+    //arreglo de personas
+    static LinkedList<Child> ChildList = new LinkedList<Child>();
+    static LinkedList<Adult> AdultList = new LinkedList<Adult>();
+    static BoatGrader bg= new BoatGrader();
+  
+    //se crean los hilos
+    static public void begin(){
+      for(Child element : ChildList){
+        element.start();
+  
+  
+      }
+      for(Adult element : AdultList){
+        element.start();
+  
+      }
+      //al terminar los hilos hacen join con el hilo principal
+      for(Child element : ChildList){
+        try {
+          element.join();
+        } catch (InterruptedException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
+      for(Adult element : AdultList){
+        try {
+          element.join();
+        } catch (InterruptedException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
+  
+  
+  
+    }
+  
+    public static void main(String args[]) {
+      //entradas del programa
+      while (childrenTot< 2){
+        System.out.println("Introduzca el numero de niños (mayor a 1): ");
+        childrenTot=sc.nextInt();
+      }
+      System.out.println("Introduzca el numero de adultos: ");
+      adultTot=sc.nextInt();
+        for (int i=0;i< childrenTot;i++){
+          ChildList.add(new Child());
+          ContChilds++;
+        }
+        for (int i=0;i< adultTot;i++){
+          AdultList.add(new Adult());
+          ContAdults++;
+        }
+        ContTotalPersonas=ContChilds+ContAdults;
+        ContAdultOahu=ContAdults;
+      ContOahu=ContTotalPersonas;
+  
+        Boat.begin();
+        System.out.println("llegaron "+ContMolokai+" personas");
+    }
+  }
+  </pre>
+              <p>ejecución:</p>
+              <pre class="prettyprint">
+    Introduzca el numero de niños (mayor a 1):
+    3
+    Introduzca el numero de adultos:
+    5
+    **Child rowing to Molokai.
+    **Child arrived on Molokai as a passenger.
+    **Child rowing to Oahu.
+    **Adult rowing to Molokai.
+    **Child rowing to Oahu.
+    **Child rowing to Molokai.
+    **Child arrived on Molokai as a passenger.
+    **Child rowing to Oahu.
+    **Adult rowing to Molokai.
+    **Child rowing to Oahu.
+    **Child rowing to Molokai.
+    **Child arrived on Molokai as a passenger.
+    **Child rowing to Oahu.
+    **Adult rowing to Molokai.
+    **Child rowing to Oahu.
+    **Child rowing to Molokai.
+    **Child arrived on Molokai as a passenger.
+    **Child rowing to Oahu.
+    **Adult rowing to Molokai.
+    **Child rowing to Oahu.
+    **Child rowing to Molokai.
+    **Child arrived on Molokai as a passenger.
+    **Child rowing to Oahu.
+    **Adult rowing to Molokai.
+    **Child rowing to Oahu.
+    **Child rowing to Molokai.
+    **Child arrived on Molokai as a passenger.
+    **Child rowing to Oahu.
+    **Child rowing to Molokai.
+    **Child arrived on Molokai as a passenger.
+    llegaron 8 personas
+  
+  
+  </pre>
+              <ul>
+                <li>Ejemplo en <strong>Go</strong>:</li>
+              </ul>
+              <pre class="prettyprint">
+    package main
+    import(
+      "fmt"
+      "time"
+    )
+    func main() {
+        fmt.Println("iniciando")
+        go printForward()
+        go printBackwards()
+      time.Sleep(time.Second * 5)
+        fmt.Println("terminando")
+    }
+    func printForward() {
+        for i := 0; i < 10; i++ {
+            fmt.Println(i)
+            time.Sleep(time.Millisecond)
+        }
+    }
+    func printBackwards() {
+        for i := 10; i <= 20; i++ {
+            fmt.Println(i)
+            time.Sleep(time.Millisecond)
+        }
+    }
+  </pre>
+              <p>En Go tenemos rutinas que tienen su propio stack, aunque estos no son hilos como tal, pero si se pueden
+                aprovechar de esta forma</p>
+              <pre class="prettyprint">
+  package main
+  import(
+    "fmt"
+    "time"
+  )
+  func main() {
+      c := make(chan string)
+      go echo(c)
+      c < - "Hola"
+      mensaje := < - c
+      fmt.Println(mensaje)
+  }
+  
+  func echo(c chan string) {
+      msg := < - c
+      time.Sleep(time.Second * 1)
+      c < - fmt.Sprintf("Mensaje recibido: %s", msg)
+  }
+  
+  salida= Mensaje recibido:Hola
+  </pre>
+  
+              <p>En Go tenemos el Select es como un switch, pero que espera mensajes en canales.
+                Su finalidad es comunicar, no comparar valores. </p>
+              <pre class="prettyprint">
+  package main
+  import(
+    "fmt"
+    "time"
+  )
+  func main() {
+      process1 := processExpensiveTransaction()
+      process2 := processExpensiveTransaction()
+      for i := 0; i < 2; i++ {
+          select {
+              case msg1 := <- process1:
+                  fmt.Println("Proceso 1 termino con status ", msg1)
+              case msg2 := <- process2:
+                  fmt.Println("Proceso 2 termino con status ", msg2)
+          }
+      }
+  }
+  
+  func processExpensiveTransaction() chan string {
+      c := make(chan string)
+      go func() {
+          time.Sleep(time.Duration(rand.Intn(6)) * time.Second)
+          c <- "ok"
+      } ()
+      return c
+  }
+  </pre>
+              <ul>
+                <li>Otro Ejemplo en <strong>Go</strong>:</li>
+              </ul>
+              <p>
+                En este ejemplo vamos a optimizar una aplicación que realiza peticiones http, haciendo uso de
+                concurrencia,
+                el siguiente código es la aplicación implementada de manera secuencial:
+              </p>
+              <pre class="prettyprint">
+  package main
+  import (
+    "fmt"
+    "log"
+    "net/http"
+    "os"
+  )
+  func sendRequest(url string){
+    res, err := http.Get(url)
+    if err != nil{
+      panic(err)
+    }
+    fmt.Printf("Estado: %d URL: %s\n", res.StatusCode,url)
+  }
+  
+  func main() {
+    if len(os.Args) < 2 {
+      log.Fatalln("Uso: go run main.go url1 url2 .. urln")
+    }
+  
+    for _, url := range os.Args[1:] {
+      sendRequest("https://" + url)
+    }
+  }
+  </pre>
+              <p>
+                Para hacer uso del programa, usamos el siguiente comando:
+              <pre class="prettyprint">
+      go run main.go url1 url2 .. urln
+    </pre>
+              Donde url1 a urln se reemplazan por urls a las cuales queremos hacer la petición Get.
+              Los resultados de esto deberían ser los siguientes, en el caso de haber usado las urls de google, youtube y
+              facebook:
+              </p>
+              <pre class="prettyprint">
+  Estado: 200 URL: https://facebook.com
+  Estado: 200 URL: https://youtube.com
+  Estado: 200 URL: https://google.com
+  </pre>
+              <p>
+                Para medir el tiempo de ejecución se debe usar el siguiente comando:
+              </p>
+              <p>
+                Para Windows:
+              <pre class="prettyprint">
+      Measure-Command {go run main.go url1 url2 .. urln}
+      </pre>
+              Para Linux:
+              <pre class="prettyprint">
+      time go run main.go url1 url2 .. urln
+      </pre>
+              Este tiempo de ejecución es importante para comparar el antes y el después de usar concurrencia. Haciendo
+              uso del comando de Windows, obtuvimos como resultado:
+              </p>
+              <pre class="prettyprint">
+  Days              : 0
+  Hours             : 0
+  Minutes           : 0
+  Seconds           : 1
+  Milliseconds      : 970
+  Ticks             : 19702343
+  TotalDays         : 2,28036377314815E-05
+  TotalHours        : 0,000547287305555556
+  TotalMinutes      : 0,0328372383333333
+  TotalSeconds      : 1,9702343
+  TotalMilliseconds : 1970,2343
+  </pre>
+              <p>
+                Actualmente nuestra aplicación funciona de manera síncrona, lo cual ralentiza su procesamiento,
+                debido a que tiene que esperar que cada petición termine para poder realizar la siguiente.
+                Ahora vamos a modificar este programa inicial para usar concurrencia y optimizar nuestra aplicación:
+              </p>
+              <pre class="prettyprint">
+    package main
+    import (
+      "fmt"
+      "log"
+      "net/http"
+      "os"
+    )
+    func sendRequest(url string){
+      res, err := http.Get(url)
+      if err != nil{
+        panic(err)
+      }
+      fmt.Printf("Estado: %d URL: %s\n", res.StatusCode,url)
+    }
+    
+    func main() {
+      if len(os.Args) < 2 {
+        log.Fatalln("Uso: go run main.go url1 url2 .. urln")
+      }
+    
+      for _, url := range os.Args[1:] {
+        go sendRequest("https://" + url)
+      }
+    }
+  </pre>
+              <p>
+                Con solo agregar la palabra go, hacemos que cada consulta se ejecute en goroutines separadas
+                y si ejecutamos el comando de Benchmark anteriormente mencionado vamos a observar que
+                el tiempo de ejecucion es mucho menor:
+              </p>
+              <pre class="prettyprint">
+  Days              : 0
+  Hours             : 0
+  Minutes           : 0
+  Seconds           : 0
+  Milliseconds      : 832
+  Ticks             : 8328442
+  TotalDays         : 9,63940046296296E-06
+  TotalHours        : 0,000231345611111111
+  TotalMinutes      : 0,0138807366666667
+  TotalSeconds      : 0,8328442
+  TotalMilliseconds : 832,8442
+  </pre>
+              <p>
+                Pero nos vamos a encontrar con un problema: no se imprimen los resultados de las goroutines
+                en consola.
+                Para corregir esto vamos a hacer uso de WaitGroup, el cual ayuda a contabilizar las rutinas que se tienen
+                activas:
+              </p>
+              <pre class="prettyprint">
+    package main
+    import (
+      "fmt"
+      "log"
+      "net/http"
+      "os"
+    )
+  
+    var wg sync.WaitGroup
+  
+    func sendRequest(url string){
+      defer wg.Done() //Decrementa el contador de goroutines 
+      res, err := http.Get(url)
+      if err != nil{
+        panic(err)
+      }
+      fmt.Printf("Estado: %d URL: %s\n", res.StatusCode,url)
+    }
+    
+    func main() {
+      if len(os.Args) < 2 {
+        log.Fatalln("Uso: go run main.go url1 url2 .. urln")
+      }
+    
+      for _, url := range os.Args[1:] {
+        go sendRequest("https://" + url)
+        wg.Add(1) //Incrementa el contador de goroutines 
+      }
+      wg.Wait() //Indica que toca esperar a que todas las goroutines terminen
+    }
+  </pre>
+              <p>
+                Si ejecutamos de nuevo nuestro programa, vamos a ver que los resultados ahora si se muestran en consola.
+              </p>
+              <pre class="prettyprint">
+      Estado: 200 URL: https://facebook.com
+      Estado: 200 URL: https://youtube.com
+      Estado: 200 URL: https://google.com
+    </pre>
+              <p>
+                Es posible que las goroutines se mezclen en consola, debido a que pueden terminar al mismo tiempo. Dando
+                como resultado:
+              </p>
+              <pre class="prettyprint">
+      Estado: 200 URL: Estado: 200 URL: https://youtube.comhttps://facebook.com
+      Estado: 200 URL: https://google.com
+    </pre>
+              <p>
+                Para evitar que esto ocurra vamos a hacer uso de Mutex, el cual ayuda a sincronizar el acceso a recursos
+                compartidos, como es el caso de la consola.
+                Para hacer uso de Mutex, hacemos lo siguiente:
+              </p>
+              <pre class="prettyprint">
+      package main
+      import (
+        "fmt"
+        "log"
+        "net/http"
+        "os"
+      )
+    
+      var wg sync.WaitGroup
+      var mut sync.Mutex
+    
+      func sendRequest(url string){
+        defer wg.Done() //Decrementa el contador de goroutines
+        res, err := http.Get(url)
+        if err != nil{
+          panic(err)
+        }
+        mut.Lock()  //Bloquea el recurso inferior para que solo esta gorutine 
+                    //pueda hacer uso de este
+        defer mut.Unlock() //Desbloquea el recursos despues de haber terminado de usarlo
+        fmt.Printf("Estado: %d URL: %s\n", res.StatusCode,url)
+      }
+      
+      func main() {
+        if len(os.Args) < 2 {
+          log.Fatalln("Uso: go run main.go url1 url2 .. urln")
+        }
+      
+        for _, url := range os.Args[1:] {
+          go sendRequest("https://" + url)
+          wg.Add(1) //Incrementa el contador de goroutines
+        }
+        wg.Wait() //Indica que toca esperar a que todas las goroutines terminen
+      }
+    </pre>
+              <ul>
+                <li>Ejemplo de concurrecia en <strong>Erlang</strong>:</li>
+              </ul>
+              <p>
+                La función spawn en Erlang nos permiete crear un proceso en paralelo.
+              </p>
+              <pre class="prettyprint">
+    -module(helloworld).
+    -export([start/0]).
+    start() ->
+      Pid = spawn(fun() -> server("Hello") end),
+  
+    server(Message) ->
+      io:fwrite("~p",[Message]).
+  </pre>
+              <p>
+                La salida es la siguiente:
+              </p>
+              <blockquote>
+                "Hello"
+              </blockquote>
+  
+              <p>
+                El operador ! nos permite enviar mensajes a los procesos.
+              </p>
+              <pre class="prettyprint">
+    -module(helloworld).
+    -export([start/0]).
+    start() ->
+      Pid = spawn(fun() -> server("Hello") end),
+      Pid ! {hello}.
+  
+    server(Message) ->
+      io:fwrite("~p",[Message]).
+  </pre>
+              <p>
+                La salida es la siguiente:
+              </p>
+              <blockquote>
+                "Hello"
+              </blockquote>
+  
+  
+              <p>
+                receive permite recibir mensajes que son enviados a los procesos.
+              </p>
+              <pre class="prettyprint">
+    -module(helloworld).
+    -export([loop/0,start/0]).
+  
+    loop() ->
+       receive
+          {rectangle, Width, Ht} ->
+             io:fwrite("Area of rectangle is ~p~n" ,[Width * Ht]),
+             loop();
+          {circle, R} ->
+          io:fwrite("Area of circle is ~p~n" , [3.14159 * R * R]),
+          loop();
+       Other ->
+          io:fwrite("Unknown"),
+          loop()
+       end.
+  
+    start() ->
+       Pid = spawn(fun() -> loop() end),
+       Pid ! {rectangle, 6, 10},
+       Pid ! {circle, 6},
+       Pid ! {square, 4, 4}.
+  </pre>
+              <p>
+                La salida es la siguiente:
+              </p>
+              <blockquote>
+                Area of rectangle is 60<br>
+                Area of circle is 113.09723999999999<br>
+                Unknown<br>
+              </blockquote>
+  
+              <ul>
+                <li>Ejemplo de concurrecia en <strong>Rust</strong>:</li>
+              </ul>
+              <p>
+                Rust facilita la programación concurrente con las comprobaciones que se hacen en tiempo de compilación y
+                con la gestión de memoria que realiza.
+              </p>
+              <p>
+                Hilos: creamos hilos con el comando thread::spawn, que recibe un closure y se lanza justo al definirlo.
+              </p>
+              <pre class="prettyprint">
+    use std::thread;
+  
+    fn main() {
+        let child = thread::spawn(|| {
+            println!("Hello from a thread!");
+        });
+        let _ = child.join();
+    }
+  </pre>
+              <p>
+                La salida es la siguiente:
+              </p>
+              <blockquote>
+                Hello from a thread!
+              </blockquote>
+  
+              <p>
+                Para esperar a que un hilo termine se puede utilizar el método join.
+              </p>
+              <p>
+                Podemos lanzar varios hilos dentro de un bucle
+              </p>
+              <!--<p>
+    Se crea un Vec donde se meten todos los hilos para luego poder hacer un join y esperar a que todos terminen. Dentro del hilo se imprime por pantalla el índice de la iteración.
+  </p>-->
+              <p>Aquí, en cada vuelta del bucle, iniciaremos un hilo con un iterador asociado. El primer hilo se inicia
+                con el número 0, el segundo con el número 1 y así sucesivamente.
+                Podemos ver en el resultado lo que se dijo antes: los subprocesos se lanzaron en un orden específico y,
+                sin embargo, al mostrar los resultados, vemos que está completamente desordenado: de hecho, la velocidad
+                de la ejecución de cada uno de los hilos variará.
+  
+                Si reiniciamos este programa, su salida y la visualización de los números serán diferentes; es imposible
+                de predecir el orden de los números que aparecerán. Pero, si utilizamos el sistema de bloqueo y
+                desbloqueo, para que cada hilo espere hasta que el anterior termine, el orden será perfecto.</p>
+              <pre class="prettyprint">
+    use std::thread;
+  
+    fn main() {
+      let mut childs = vec![];
+  
+      for i in 0..10 {
+          let child = thread::spawn(move || {
+              println!("Hello from a thread! {}", i);
+          });
+          childs.push(child);
+      }
+  
+      for c in childs {
+          let _ = c.join();
+      }
+    }
+  </pre>
+              <p>
+                La salida es la siguiente:
+              </p>
+              <blockquote>
+                Hello from a thread! 1 <br>
+                Hello from a thread! 0 <br>
+                Hello from a thread! 5 <br>
+                Hello from a thread! 3 <br>
+                Hello from a thread! 7 <br>
+                Hello from a thread! 4 <br>
+                Hello from a thread! 8 <br>
+                Hello from a thread! 6 <br>
+                Hello from a thread! 2 <br>
+                Hello from a thread! 9 <br>
+  
+              </blockquote>
+  
+  
+              <p>
+                Mutex y Arc: Para compartir una referencia a memoria entre hilos se usa Arc y Mutex en combinación.
+                Arc es un contador de referencias que se puede compartir entre hilos.
+                Mutex implementa el bloqueo asociado a la variable en concreto.
+  
+              </p>
+              <pre class="prettyprint">
+    use std::thread;
+    use std::sync::{Arc, Mutex};
+  
+    fn main() {
+        let mut childs = vec![];
+        let shared = Arc::new(Mutex::new(String::from("")));
+  
+        for i in 0..10 {
+            let s = shared.clone();
+            let child = thread::spawn(move || {
+                println!("In thread {}", i);
+  
+                let out = String::from("Thread ") + &i.to_string() + "\n";
+                s.lock().unwrap().push_str(&out);
+            });
+            childs.push(child);
+        }
+  
+        for c in childs {
+            let _ = c.join();
+        }
+  
+        println!("\nOutput:\n{}", *(shared.lock().unwrap()));
+    }
+  
+  </pre>
+              <p>
+                La salida es la siguiente:
+              </p>
+              <blockquote>
+                In thread 0 <br>
+                In thread 3 <br>
+                In thread 5 <br>
+                In thread 4 <br>
+                In thread 2 <br>
+                In thread 6 <br>
+                In thread 7 <br>
+                In thread 8 <br>
+                In thread 1 <br>
+                In thread 9 <br>
+                <br>
+                Output: <br>
+                Thread 0 <br>
+                Thread 3 <br>
+                Thread 5 <br>
+                Thread 4 <br>
+                Thread 2 <br>
+                Thread 6 <br>
+                Thread 7 <br>
+                Thread 8 <br>
+                Thread 1 <br>
+                Thread 9 <br>
+              </blockquote>
+  
+              <p>
+                En este ejemplo se define la cadena dentro de un Mutex y este dentro de un Arc, así se comparte la memoria
+                entre hilos.
+                <br>
+                channel crea un transmisor, tx, y un receptor, rx, en cada hilo, clona el transmisor y escribe en este la
+                salida. En el send se puede enviar cualquier tipo de dato según se cree el channel, no se pueden enviar
+                diferentes tipos de datos por el mismo canal.
+  
+              </p>
+              <pre class="prettyprint">
+    use std::thread;
+    use std::sync::mpsc;
+  
+    fn main() {
+        let (tx, rx) = mpsc::channel();
+        let mut childs = vec![];
+  
+        for i in 0..10 {
+            let tx = tx.clone();
+            let child = thread::spawn(move || {
+                println!("In thread {}", i);
+  
+                let out = String::from("Thread ") + &i.to_string();
+                tx.send(out).unwrap();
+            });
+            childs.push(child);
+        }
+  
+        for c in childs {
+            let _ = c.join();
+        }
+  
+        println!("\nOutput:");
+        loop {
+            match rx.try_recv() {
+                Ok(x) => println!("{}", x),
+                Err(_) => break
+            }
+        }
+    }
+  
+  </pre>
+              <p>
+                La salida es la siguiente:
+              </p>
+              <blockquote>
+                In thread 0 <br>
+                In thread 2 <br>
+                In thread 1 <br>
+                In thread 4 <br>
+                In thread 5 <br>
+                In thread 6 <br>
+                In thread 3 <br>
+                In thread 8 <br>
+                In thread 7 <br>
+                In thread 9 <br>
+                <br>
+                Output: <br>
+                Thread 0 <br>
+                Thread 2 <br>
+                Thread 1 <br>
+                Thread 4 <br>
+                Thread 5 <br>
+                Thread 6 <br>
+                Thread 8 <br>
+                Thread 7 <br>
+                Thread 9 <br>
+                Thread 3 <br>
+              </blockquote>
+  
+              <ul>
+                <li>Ejemplo de concurrencia en <strong>Crystal</strong>:</li>
+              </ul>
+              <p>
+                Crystal usa hilos llamados fibras para lograr concurrencia. Las fibras se comunican entre sí mediante
+                canales, como en Go o Clojure, sin tener que recurrir a la memoria compartida o bloqueos.
+                <br>
+                Cuando se inicia un programa, se activa la fibra principal que ejecutará su código de nivel superior.
+                Allí, uno puede engendrar (spawn) más fibras.
+                Los componentes de un programa son:
+              <ul>
+                <li>Runtime Scheduler, a cargo de ejecutar todas las fibras cuando sea el momento adecuado. </li>
+                <li>El bucle de eventos, que es solo otra fibra, está a cargo de tareas asíncronas, como por ejemplo
+                  archivos, sockets, pipes, señales y temporizadores.</li>
+                <li>Canales, para comunicar datos entre fibras. Runtime Scheduler coordinará fibras y canales para su
+                  comunicación.</li>
+                <li>Garbage collector: para limpiar la memoria que "ya no se usa".</li>
+              </ul>
+              Fibras: Para generar una fibra se usa el comando spawn
+              </p>
+  
+              <pre class="prettyprint">
+    spawn do
+      loop do
+        puts "Hello!"
+      end
+    end
+  
+    sleep 1.second
+  </pre>
+              <p>
+                Este programa imprimirá "¡Hello!" por un segundo y luego saldrá. Esto se debe a que la llamada de espera
+                programará la fibra principal que se ejecutará en un segundo y luego ejecutará otra fibra "lista para
+                ejecutarse", que en este caso es la de arriba.
+                <br><br>
+                Otra manera seria:
+              </p>
+  
+              <pre class="prettyprint">
+    spawn do
+      loop do
+        puts "Hello!"
+      end
+    end
+  
+    Fiber.yield
+  </pre>
+  
+              <p>
+                Fiber.yield le dirá al scheduler que ejecute la otra fibra. Esto imprimirá "Hello" hasta los bloques de
+                salida estándar y luego la ejecución continuará con la fibra principal y el programa saldrá.
+              </p>
+  
+              <p>
+                Creando(spawn) una llamada:
+                <br><br>
+                El programa imprime los números del 0 al 9. Se crea un Proc y se invoca pasando I, por lo que el valor se
+                copia y la fibra engendrada recibe una copia.
+              </p>
+  
+              <pre class="prettyprint">
+    i = 0
+    while i < 10
+      proc = ->(x : Int32) do
+        spawn do
+          puts(x)
+        end
+      end
+      proc.call(i)
+      i += 1
+    end
+  
+    Fiber.yield
+  </pre>
+  
+              <p>
+                La salida es la siguiente:
+              </p>
+  
+              <blockquote>
+                0 <br>
+                1 <br>
+                2 <br>
+                3 <br>
+                4 <br>
+                5 <br>
+                6 <br>
+                7 <br>
+                8 <br>
+                9 <br>
+              </blockquote>
+  
+              <p>
+                Canales:
+                <br>
+                Cuando el programa ejecuta una recepción, esa fibra se bloquea y la ejecución continúa con la otra fibra.
+                Cuando se ejecuta un envió, la ejecución continúa con la fibra que estaba esperando en ese canal.
+              </p>
+  
+              <pre class="prettyprint">
+    channel = Channel(Int32).new
+  
+    spawn do
+      puts "Before first send"
+      channel.send(1)
+      puts "Before second send"
+      channel.send(2)
+    end
+  
+    puts "Before first receive"
+    value = channel.receive
+    puts value # => 1
+  
+    puts "Before second receive"
+    value = channel.receive
+    puts value # => 2
+  </pre>
+              <p>
+                La salida es la siguiente:
+              </p>
+              <blockquote>
+                Before first receive <br>
+                Before first send <br>
+                1 <br>
+                Before second receive <br>
+                Before second send <br>
+                2 <br>
+  
+              </blockquote>
+  
+              <ul>
+                <li>Ejemplo en <strong>C</strong> con el juego de pacman:<br />
+                  Aquí, el programa debe poder recibir la entrada teclado del usuario. Pero también, al mismo tiempo,
+                  tienes que:
+                  <br />
+                  - Calcula los movimientos de los enemigos gracias a la inteligencia artificial.<br />
+                  - Ver los diferentes desplazamientos.<br />
+                  - Actualizar el mapa<br />
+                </li>
+              </ul>
+  
+              <div class="highlight highlight-source-python">
+                <pre>
+  <span class="pl-k">int</span> <span class="pl-en">main_loop</span>(<span class="pl-smi">IGame *Game, IGui *curse</span>):
+    {
+      <span class="pl-k">board</span> game;
+      <span class="pl-k">t_orientation</span> dir;
+      <span class="pl-k">int</span> k = 0;
+  
+      <span class="pl-s">while</span> (k == 0)
+      {
+        dir = curse-><span class="pl-c1">get_touch</span>();
+        <span class="pl-s">if</span> (dir > 4)
+          <span class="pl-c1">return</span> (dir);
+        k = Game-><span class="pl-c1">check_move</span>(dir);
+        game = Game-><span class="pl-c1">get_board</span>();
+        <span class="pl-s">if</span> (curse-><span class="pl-c1">display</span>(game) == -1)
+          <span class="pl-c1">return</span> (0);
+      }
+      <span class="pl-c1">delete</span> curse;
+      <span class="pl-c1">delete</span> Game;
+      <span class="pl-c1">return</span> (0);
+    }
+  </pre>
+              </div>
+  
+              <p>Si observamos el código que se muestra, la función get_touch iniciará un hilo que se ocupará de recuperar
+                la entrada del teclado pero no bloqueará el resto del programa: no esperará a recuperar una tecla para
+                continuar.</p>
+  
+              <img src="images/Pacman.gif"><br /><br /><br />
+  
+  
+     
+          </div>
+        </div>
+
+
+      </section><!-- #about -->
+
+      
+      <!-- #about -->
+    </main>
+
+
+    <footer id="footer">
+      <div class="container">
+        <div class="credits">
+          Creado por estudiantes del curso Lenguajes de Programación de la
+          Universidad Nacional de Colombia.
+        </div>
+      </div>
+    </footer>
+    <!-- #footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
