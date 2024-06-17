@@ -96,249 +96,234 @@
       <br /><br />
       <section id="lenguajes" style="margin-top: 50px">
         <div class="container">
-          <div class="text_cell_render border-box-sizing rendered_html">
-            <h2 class="title"><strong>Lenguajes</strong></h2>
+            <div class="text_cell_render border-box-sizing rendered_html">
+                <h2 class="title"><strong>Lenguajes</strong></h2>
 
-            <ul id="elixir">
-              <li><strong>Elixir</strong></li>
-            </ul>
-            <center>
-              <img src="images/elixir.png" width="150px" height="150px" />
-            </center>
-            <br />
-            Elixir es lenguaje de programación de propósito general,
-            concurrente; este lenguaje es funcional. Además está construido
-            sobre la MV de Erlang y aprovecha esto para construir sistemas
-            distribuidos y tolerantes a fallos con baja latencia. Es utilizado
-            para construcción de API's y para optimización en el desarrollo web.
-            Es utilizado en muchos frameworks como Hedwig, para la
-            implementación de chatbots en distintas redes sociales y demás.
-            Elixir presenta ejecución por hilos (referida como procesos) en un
-            ambiente en el cuál múltiples procesos pueden comunicarse unos con
-            otros vía mensajes.
+                <!-- Ada -->
+                <div id="ada">
+                    <h3><strong>Ada</strong></h3>
+                    <center>
+                        <img src="images/ada-coin.jpg" width="150px" height="150px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> Ada es un lenguaje nacido de un proyecto en los 70s del ejército de los Estados Unidos, con la principal prioridad en la seguridad y la minimización de errores.
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> Sincroniza las tareas por rendez vous.
+                    </p>
+                    <p>
+                        <strong>Herramientas para aprovechar la concurrencia:</strong> Amplio uso en la industria de las infraestructuras de riesgo grande, como sistemas de aviones, trenes, tanques y misiles.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> Sistemas de planeación aérea y naval.
+                    </p>
+                </div>
+                <br />
 
-            <br /><br />
+                <!-- Haskell -->
+                <div id="haskell">
+                    <h3><strong>Haskell</strong></h3>
+                    <center>
+                        <img src="images/haskell.png" width="150px" height="150px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> Haskell es un lenguaje polimórficamente tipificado, perezoso, puramente funcional, muy diferente a la mayoría de los otros lenguajes de programación.
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> La concurrencia es "ligera", lo que significa que tanto la creación de hilos como los gastos generales de cambio de contexto son extremadamente bajos.
+                    </p>
+                    <p>
+                        <strong>Herramientas para aprovechar la concurrencia:</strong> La programación de los hilos de Haskell se hace internamente y no hace uso de ningún paquete de hilos suministrado por el sistema operativo.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> Análisis de sintaxis en código alojado en GitHub.
+                    </p>
+                </div>
+                <br />
 
-            <b>Aplicaciones notables:</b> Changelog, una plataforma de podcasts
-            para desarrolladores. <br /><br />
+                <!-- Erlang -->
+                <div id="erlang">
+                    <h3><strong>Erlang</strong></h3>
+                    <center>
+                        <img src="images/erlang.png" width="150px" height="150px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong>  Creado por Ericsson en 1986 con el propósito de desarrollar sistemas de telecomunicaciones. Diseñado para soportar numerosos procesos concurrentes. Liberado como software libre en 1998. A llevado al desarrollo de otros lenguajes que priorizan la concurrencia.
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> Modelo de concurrencia basado en actores, esto quiere decir que cuenta con procesos aislados que no comparten memoria, estos procesos se comunican a través de mensajes y son procesos ligeros gestionados por la máquina virtual BEAM. 
+                    </p>
+                    <p>
+                        <strong>Herramientas para aprovechar la concurrencia:</strong> Erlang ofrece diversas herramientas y bibliotecas que facilitan la gestión de la concurrencia y la construcción de sistemas distribuidos. La principal de estas es OTP (Open Telecom Platform) que proporciona componentes como supervisores, gen_servers, y otros patrones de diseño que facilitan la gestión de la concurrencia y la tolerancia a fallos. 
+                        <ul>
+                          <li>Supervisores: Procesos especiales que supervisan otros procesos</li>
+                          <li>Gen_servers: Gestionan el ciclo de vida de los procesos y la comunicación entre ellos.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> Lógica de negocio de aplicaciones como WhatsApp.
+                    </p>
+                </div>
+                <br />
 
-            <ul id="ada">
-              <li><strong>Ada</strong></li>
-            </ul>
-            <center>
-              <img src="images/ada-coin.jpg" width="150px" height="150px" />
-            </center>
-            Ada es un lenguaje nacido de un proyecto en los 70s del ejército de
-            los Estados Unidos, el cual tenía como principal requisito la
-            seguridad, es decir, se debía tener un lenguaje con nula cantidad de
-            errores. El lenguaje es usado de forma amplia en la industria de las
-            infraestructuras de riesgo grande, como lo es sistemas de aviones,
-            trenes, tanques y misiles. Es fuertemente tipado, uno de los más
-            tipados, debido a la necesidad explicita de minimizar los errores.
-            Ha tenido relativamente pocas actualizaciones. Es uno de los
-            pioneros en programación orientado a objetos, lenguaje
-            multipropósito. Sincroniza las tareas por rendez vous.
+                <!-- Elixir -->
+                <div id="elixir">
+                    <h3><strong>Elixir</strong></h3>
+                    <center>
+                        <img src="images/elixir.png" width="150px" height="150px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> Elixir es un lenguaje de programación de propósito general, concurrente y funcional. Comenzó en 2011 con el objetivo de aprovechar la robustez y el rendimiento de Erlang y su máquina virtual, introduciendo características y mejoras que hicieran el lenguaje más productivo para los desarrolladores modernos, lo que lo ha hecho popular en el entorno de desarrollo web.
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> Al igual que Erlang, Elixir se basa en el modelo de actores y aprovecha la máquina virtual BEAM, ofreciendo aislamiento de procesos, comunicación mediante mensajes y la ligereza de los procesos.
+                    </p>
+                    <p>
+                        <strong>Herramientas para aprovechar la concurrencia:</strong> Además de las herramientas OTP, podemos encontrar Phoenix Web Framework, capaz de manejar un alto tráfico concurrente y adecuado para aplicaciones con notificaciones en tiempo real; Task, para ejecutar funciones de forma concurrente; y Agent, para gestionar el estado compartido entre procesos.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> Changelog, una plataforma de podcasts para desarrolladores.
+                    </p>
+                </div>
+                <br />
 
-            <br /><br />
+                <!-- Rust -->
+                <div id="rust">
+                    <h3><strong>Rust</strong></h3>
+                    <center>
+                        <img src="images/rust.png" width="150px" height="150px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> Rust es un lenguaje de programación compilado, de propósito general y multiparadigma. Patrocinado por Mozilla desde 2009, Rust tiene como propósito ofrecer seguridad en memoria y concurrencia, diseñado específicamente para evitar problemas comunes como condiciones de carrera, desbordamiento de búfer y violaciones de acceso a memoria.
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> En el modelo de propiedad y préstamos de Rust, la propiedad asegura que solo un propietario pueda modificar un valor a la vez, mientras que los préstamos permiten el acceso seguro a datos compartidos. En cuanto a los tipos de concurrencia, Rust soporta concurrencia basada en hilos (threads) y basada en tareas asíncronas. Además, proporciona seguridad en la concurrencia al verificar las condiciones de seguridad en tiempo de compilación.
+                    </p>
+                    <p>
+                        <strong>Herramientas para aprovechar la concurrencia:</strong> En Rust, std::thread permite crear y gestionar hilos de manera segura, mientras que std::sync proporciona primitivas de sincronización para manejar el acceso concurrente a los datos. Además, las funciones async/await facilitan la escritura de código asíncrono y concurrente.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> Partes del kernel de Linux, cuya escritura es soportada desde octubre de 2022.
+                    </p>
+                </div>
+                <br />
 
-            <b>Aplicaciones notables:</b> Sistemas de planeación aérea y naval.
-            <br /><br />
+                <!-- GO -->
+                <div id="go">
+                    <h3><strong>GO</strong></h3>
+                    <center>
+                        <img src="images/go.png" width="150px" height="150px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> Diseñado en Google en 2007, Go (también conocido como Golang) tenía como objetivo combinar lo mejor de los lenguajes compilados, como la eficiencia y la seguridad, con las ventajas de los lenguajes interpretados, como la facilidad de uso y la productividad. Hoy en día, Go es popular en sistemas distribuidos, microservicios y aplicaciones en la nube
+                    </p>
+                    <p>
+                        <strong>Concurrencia y herramientas en el lenguaje:</strong> En Go, las goroutines son funciones que se ejecutan concurrentemente en el mismo espacio de direcciones y son gestionadas por el runtime de Go. Los canales permiten la comunicación y sincronización entre goroutines, pudiendo ser sincrónicos o asincrónicos.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> El código backend de Uber.
+                    </p>
+                </div>
+                <br />
 
-            <ul id="rust">
-              <li><strong>Rust</strong></li>
-            </ul>
-            <center>
-              <img src="images/rust.png" width="150px" height="150px" />
-            </center>
-            Rust es un lenguaje de programación compilado, de propósito general
-            y multiparadigma desarrollado por Mozilla y ha sido diseñado para
-            ser ‘un lenguaje seguro, concurrente y práctico’. Rust se enfoca
-            principalmente en seguridad, velocidad y concurrencia. Una de sus
-            principales características es que es posible arreglar bugs en
-            tiempo de ejecución. Usado en desarrollo web y embebido.
-            <br /><br />
+                <!-- Crystal -->
+                <div id="crystal">
+                    <h3><strong>Crystal</strong></h3>
+                    <center>
+                        <img src="images/crystal.png" width="150px" height="150px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> Crystal es uno de los nuevos lenguajes en la escena, iniciado en 2012. Tiene una sintaxis similar a Ruby, estáticamente tipado, compilado y es self-hosted (Crystal está escrito en Crystal).
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> Crystal viene con una primitiva de concurrencia llamada fibras, que son básicamente una versión más ligera de hilos. Las otras primitivas de concurrencia son canales.
+                    </p>
+                    <p>
+                        <strong>Herramientas para aprovechar la concurrencia:</strong> Utiliza canales para la concurrencia, similar a Go.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> Servicios web de compañías como Errordeck, GigSmart, Appmonitor, etc.
+                    </p>
+                </div>
+                <br />
 
-            <b>Aplicaciones notables:</b> Partes del kernel de Linux, cuya
-            escritura es soportada desde octubre de 2022. <br /><br />
+                <!-- Java -->
+                <div id="java">
+                    <h3><strong>Java</strong></h3>
+                    <center>
+                        <img src="images/java.png" width="200px" height="150px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> Java es un lenguaje de programación orientado a objetos creado en 1991 y publicado en 1995 por Sun Microsystem (adquirida por Oracle en 2010), con la intención de que los programadores escribieran el código solo una vez y lo ejecutaran en cualquier dispositivo.
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> Java permite realizar concurrencia con la librería threads. Además, cuenta con otras librerías que implementan métodos de planificación y control de procesos (variables atómicas, semáforos, entre otros) traídos del paquete concurrent.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> Innumerables. Desde servicios web backend mediante Spring Boot hasta desarrollo de videojuegos con LWJGL, la librería usada para escribir Minecraft.
+                    </p>
+                </div>
+                <br />
 
-            <ul id="erlang">
-              <li><strong>Erlang</strong></li>
-            </ul>
-            <center>
-              <img src="images/erlang.png" width="150px" height="150px" />
-            </center>
-            Erlang es un lenguaje de programación funcional de alto nivel,
-            diseñado para escribir aplicaciones concurrentes y distribuidas de
-            funcionamiento ininterrumpido. Erlang usa procesos concurrentes para
-            estructurar la aplicación. Estos procesos no comparten memoria y se
-            comunican de forma asincrónica mediante el paso de mensajes.
-            Utilizado en telecomunicaciones, e-commerce y mensajería
-            instantánea.
+                <!-- Python -->
+                <div id="python">
+                    <h3><strong>Python</strong></h3>
+                    <center>
+                        <img src="images/python.png" width="96px" height="96px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> Python es el lenguaje más utilizado a nivel mundial (según revista IEEE). Es un lenguaje de sintaxis simple y cubre una gran cantidad de áreas del conocimiento como inteligencia artificial y ciencia de datos.
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> Cuenta con varias librerías para la implementación de programación concurrente y su respectivo control, como lo son la librería "Thread" y "Multiprocessing".
+                    </p>
+                    <p>
+                        <strong>Herramientas para aprovechar la concurrencia:</strong> La librería "Thread" incluye una interfaz de alto nivel orientada a objetos para trabajar con concurrencia desde Python. Los objetos Thread se ejecutan al mismo tiempo dentro del mismo proceso y comparten memoria.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> El backend de Instagram.
+                    </p>
+                </div>
+                <br />
 
-            <br /><br />
+                <!-- C -->
+                <div id="c">
+                    <h3><strong>C</strong></h3>
+                    <center>
+                        <img src="images/c.jpg" width="180px" height="96px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> C es uno de los lenguajes más rápidos que existen puesto a que es un lenguaje compilado. Es altamente usado en el diseño y desarrollo de los sistemas operativos que hoy en día se usan.
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> En cuanto a programación concurrente, usa la librería pthread.h para la creación de hilos y métodos de control muy básicos como la implementación de un semáforo.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> El kernel de Linux y otros lenguajes como Python y C++.
+                    </p>
+                </div>
+                <br />
 
-            <b>Aplicaciones notables:</b> Lógica de negocio de aplicaciones como
-            WhatsApp. <br /><br />
-
-            <ul id="go">
-              <li><strong>GO</strong></li>
-            </ul>
-            <center>
-              <img src="images/go.png" width="150px" height="150px" />
-            </center>
-            GO Es un lenguaje de programación compilado, concurrente,
-            imperativo, estructurado, no orientado a objetos con recolector de
-            basura, soportado en diferentes tipos de sistemas. La concurrencia
-            en Go es diferente a los criterios de programación basados en
-            bloqueos como pthreads. Es fácil de aprender debido a su similitud
-            con los lenguajes más usados, es implementado en modelos de negocio
-            y manejo de servidores.
-
-            <br /><br />
-
-            <b>Aplicaciones notables:</b> El código backend de Uber.<br /><br />
-
-            <ul id="haskell">
-              <li><strong>Haskell</strong></li>
-            </ul>
-            <center>
-              <img src="images/haskell.png" width="150px" height="150px" />
-            </center>
-            Haskell es un lenguaje polimórficamente tipificado, perezoso,
-            puramente funcional, muy diferente a la mayoría de los otros
-            lenguajes de programación. La concurrencia es "ligera", lo que
-            significa que tanto la creación de hilos como los gastos generales
-            de cambio de contexto son extremadamente bajos. La programación de
-            los hilos de Haskell se hace internamente y no hace uso de ningún
-            paquete de hilos suministrado por el sistema operativo.
-
-            <br /><br />
-
-            <b>Aplicaciones notables:</b> Análisis de sintaxis en código alojado
-            en GitHub <br /><br />
-
-            <ul id="crystal">
-              <li><strong>Crystal</strong></li>
-            </ul>
-            <center>
-              <img src="images/crystal.png" width="150px" height="150px" />
-            </center>
-            Crystal es uno de los nuevos lenguajes en la escena. Aunque no tan
-            conocido como Rust, Elixir o Julia, tiene mucho que ofrecer. Iniciò
-            en 2012, y según describen sus creadores, sus características
-            principales son:
-            <br /><br />
-            - Sintaxis similar a Ruby<br />
-            - Estáticamente tipado<br />
-            - Compilado<br />
-            - Self-hosted (Crystal está escrito en… crystal)
-
-            <br /><br />
-            Crystal viene con una primitiva de concurrencia llamada fibras, que
-            son básicamente una versión más ligera de hilos. Las otras
-            primitivas de concurrencia son canales. Si ha hecho algo de Golang,
-            esta es básicamente la misma idea.
-
-            <br /><br />
-
-            <b>Aplicaciones notables:</b> Servicios web de compañías como
-            Errordeck, GigSmart, Appmonitor, etc. <br /><br />
-
-            <ul id="java">
-              <li><strong>Java</strong></li>
-            </ul>
-            <center>
-              <img src="images/java.png" width="200px" height="150px" />
-            </center>
-
-            Java es un lenguaje de programación orientado a objetos creado en
-            1991 y publicado en 1995 por Sun Microsystem (adquirida por Oracle
-            en 2010), con la intención de que los programadores escribieran el
-            código solo una y lo ejecutarán en cualquier dispositivo. Java
-            permite realizar concurrencia con la librería threads. Además de que
-            cuenta con otras librerías que implementan métodos de planificación
-            y control de procesos (variables atómicas, semáforos, entre otros)
-            traídos del paquete concurrent.
-            <div class="mt-4">
-              <p>
-                Es altamente recomendable de utilizar hilos con estos lenguajes.
-                En cualquier caso, cuando, un lenguaje permite de hacer
-                programación concurrente, debe usarlo. Además, cuando uses estos
-                lenguajes, a menudo usarás hilos sin siquiera saberlo. De hecho,
-                hay muchas funciones incluidas en los lenguajes que crean un
-                hilo sin preguntarle al programador.
-              </p>
+                <!-- C++ -->
+                <div id="c++">
+                    <h3><strong>C++</strong></h3>
+                    <center>
+                        <img src="images/cpp.png" width="96px" height="96px" />
+                    </center>
+                    <p>
+                        <strong>Historia:</strong> Fue diseñado a mediados de los años 80 por el danés Bjarne Stroustrup. Su intención fue la de extender el lenguaje de programación C para que tuviese los mecanismos necesarios para manipular objetos.
+                    </p>
+                    <p>
+                        <strong>Concurrencia en el lenguaje:</strong> C++ contiene los paradigmas de la programación estructurada y orientada a objetos. Se puede usar una librería thread que es básicamente una sección de código independiente que el procesador puede ejecutar de forma concurrente junto a otros threads o hilos de ejecución.
+                    </p>
+                    <p>
+                        <strong>Aplicaciones notables:</strong> Motores gráficos como Source de Valve, usado en videojuegos como Half-Life y Counter-Strike.
+                    </p>
+                </div>
             </div>
-
-            <b>Aplicaciones notables:</b> Innumerables. Desde servicios web
-            backend mediante Spring Boot hasta desarrollo de videojuegos con
-            LWJGL, la librería usada para escribir Minecraft.<br /><br />
-
-            <ul id="python">
-              <li><strong>python</strong></li>
-            </ul>
-            <center>
-              <img src="images/python.png" width="96px" height="96px" />
-            </center>
-
-            Python es el lenguaje más utilizado a nivel mundial (según revista
-            IEEE), es un lenguaje de sintaxis simple y cuyas aplicaciones cubren
-            una gran cantidad de áreas del conocimiento como lo son inteligencia
-            artificial, ciencia de datos, entre otras. En cuanto a programación
-            concurrente, cuenta con varias librerías para la implementación de
-            esta y su respectivo control, como lo son la librería "Thread" y
-            "Multiprocessing", que provee de herramientas como semáforos,
-            monitores, entre otros. Específicamente la librería "Thread" incluye
-            una interfaz de alto nivel orientada a objetos para trabajar con
-            concurrencia desde Python. Los objetos Thread se ejecutan al mismo
-            tiempo dentro del mismo proceso y comparten memoria.
-
-            <br /><br />
-
-            <b>Aplicaciones notables:</b> El backend de Instagram. <br /><br />
-
-            <ul id="c">
-              <li><strong>C</strong></li>
-            </ul>
-            <center>
-              <img src="images/c.jpg" width="180px" height="96px" />
-            </center>
-            C es uno de los lenguajes más rápidos que existen puesto a que es un
-            lenguaje compilado, es altamente usado en el diseño y desarrollo de
-            los sistemas operativos que hoy en día se usan, además de que
-            facilita el uso de memoria dinámica y muchas otras características.
-            En cuanto a programación concurrente, usa la librería pthread.h para
-            la creación de hlos y métodos de control muy básicos como la
-            implementación de un semáforo.
-
-            <br /><br />
-
-            <b>Aplicaciones notables:</b> El kernel de Linux y otros lenguajes
-            como Python y C++. <br /><br />
-
-            <ul id="c++">
-              <li><strong>C++</strong></li>
-            </ul>
-            <center>
-              <img src="images/cpp.png" width="96px" height="96px" />
-            </center>
-            <br />
-            Fue diseñado a mediados de los años 80 por el danés Bjarne
-            Stroustrup. Su intención fue la de extender el lenguaje de
-            programación C para que tuviese los mecanismos necesarios para
-            manipular objetos. Por lo tanto C++ contiene los paradigmas de la
-            programación estructurada y orientada a objetos. Se puede usar una
-            librería thread que es básicamente una sección de código
-            independiente que el procesador puede ejecutar de forma concurrente
-            junto a otros threads o hilos de ejecución.
-
-            <br /><br />
-
-            <b>Aplicaciones notables:</b> Motores gráficos como Source de Valve,
-            usado en videojuegos como Half-Life y Counter-Strike.<br /><br />
-          </div>
         </div>
       </section>
+
       <section id="ejemplosLenguajes" style="margin-top:50px;">
         <div class="container">
           <div class="text_cell_render border-box-sizing rendered_html">
