@@ -1535,7 +1535,7 @@
                     de n filósofos, sólo haya n-1 sentados en la mesa. De esta manera, se garantiza que al menos uno de los filósofos
                     pueda terminar su comida. Cuando el primer filósofo haya terminado, se retirará del recinto e intercambiará lugares
                     con quien estaba esperando.<br><br>
-                    <img src="images/arbitro.png" width="70%">
+                    <img src="images/arbitro.png" width="50%">
                   </li>
                     </ul>
     
@@ -1992,9 +1992,9 @@
                 Una marca en una red de Petri es acotada si existe un entero positivo N que tiene la propiedad de que en
                 cualquier sucesión de descarga ningún lugar recibe mas de N fichas. Ahora si una marca M esta acotada y en
                 cualquier sucesión de descarga ningún lugar recibe mas de una ficha, se dice que M es una marca segura.
-                <center><img src="images/petri.png" width="100%" height="400px"></center><br><br>
+                <center><img src="images/petri.png" width="100%" height="400px"></center>
                 <strong><i>Ejemplo en el cual se simula la llegada de material, para luego bifurcarla paralelamente, en dos
-                    máquinas, y luego unirlos en la salida.</i></strong>
+                    máquinas, y luego unirlos en la salida.</i></strong><br><br>
                 <h3>CSP (Communicating Sequential Processes)</h3>
                 Es una teoría matemática para especificar y verificar patrones de comportamiento como abrazos mortales o
                 Livelocks que se dan durante al interacción de objetos concurrentes. Su semántica formal y composicional
@@ -2090,7 +2090,7 @@
                               <li>Cálculo de números primos</li>
                               <li>Comprobación de la igualdad de las secuencias de hojas en los árboles</li>
                             </ul>     
-                            <img src="images/Aplicaciones-Merge_Paralelo.png" width="40%" height="40%"  style='float: left;' alt="">
+                            <img src="images/Aplicaciones-Merge_Paralelo.png" width="40%" height="40%"  style='float: left; margin:3%' alt="">
                           </div>
                           
                         </li>
@@ -2098,6 +2098,7 @@
                           <h4>Motores de videojuegos</h4>
                           <p>Los motores que soportan la ejecución de videojuegos deben realizar distintos subprocesos que, orquestados correctamente, componen la experiencia del jugador, como lo son:</p>
                           <center><img src="images/Aplicaciones-Motores.jpg" width="80%" height="80%" alt=""></center>
+                          <br>
                           <ul>
                             <li>Game logic</li>
                             <li>Físicas </li>
@@ -2110,6 +2111,7 @@
                         </li>
                     
                       </ul>
+                      <br>
                       <p>Otros ejemplos puntuales son:</p>
                         <ul>
                           <li>Manejo de eventos asincrónicos como la llegada de paquetes de red</li>
@@ -2126,19 +2128,19 @@
                           <li>Simulación</li>
                           <li>Videojuegos</li>
                         </ul>
-
-                        <p>En estos últimos ejemplos, la programación concurrente se utiliza para:<br />
-                            - Los videojuegos: para la recuperación de claves, la interfaz gráfica y el procesamiento de
-                            datos recibidos por el servidor para juegos en línea.<br />
-                            - Servicios web, donde el servidor tendrá que lidiar con muchas solicitudes al mismo tiempo. En este
+                        <br>
+                        <ul>En estos últimos ejemplos, la programación concurrente se utiliza para:<br />
+                            <li><strong> videojuegos:</strong> para la recuperación de claves, la interfaz gráfica y el procesamiento de
+                            datos recibidos por el servidor para juegos en línea.</li>
+                            <li><strong>Servicios web</strong>, donde el servidor tendrá que lidiar con muchas solicitudes al mismo tiempo. En este
                             contexto,
                             se vuelve interesante tener múltiples hilos de ejecución, permitiendo que cada uno de ellos atienda
-                            una solicitud; de esta manera, habilita la paralelización de la gestión de múltiples tareas. <br />
-                            - Bases de datos, o ésta, una vez más, tendrá que atender solicitudes al mismo tiempo.<br />
-                            - Y, finalmente, cualquier interacción con una interfaz gráfica: de hecho, cuando realiza una acción que
+                            una solicitud; de esta manera, habilita la paralelización de la gestión de múltiples tareas. </li>
+                            <li><strong>Bases de datos</strong>, o ésta, una vez más, tendrá que atender solicitudes al mismo tiempo.</li>
+                            <li>Y, finalmente, <strong>cualquier interacción con una interfaz gráfica:</strong> de hecho, cuando realiza una acción que
                             se mostrará en la pantalla, el programa tendrá que continuar mientras que la interfaz gráfica mostrará los
-                            cambios.<br />
-                          </p>
+                            cambios.</li>
+                        </ul>
                   </div> 
               </div>
             </div>
@@ -2257,20 +2259,20 @@
       
                 <ul>
                     <li>Permite optimizar el uso de recursos en sistemas mono/multiprocesador.</li>
-                    <li>Fiable administración de los datos en sistemas con gran información</li>
-                    <li>Mejor aprovechamiento de la CPU</li>
-                    <li>Modularidad y reutilización de código</li>
-                    <li>Desarrollo de software más flexible</li>
-                    <li>Permite el desarrollo de aplicaciones que no se vean afectadas en tiempo real</li>
+                    <li>Fiable administración de los datos en sistemas con gran información.</li>
+                    <li>Mejor aprovechamiento de la CPU.</li>
+                    <li>Modularidad y reutilización de código.</li>
+                    <li>Desarrollo de software más flexible.</li>
+                    <li>Permite el desarrollo de aplicaciones que no se vean afectadas en tiempo real.</li>
                     <li>Permite compartir recursos entre tareas lentas y tareas rápidas para que las tareas lentas no retrasen
                       mucho a las rápidas.</li>
                     <li>Velocidad de ejecución.</li>
                     <li>Menores tiempos de respuesta.</li>
-                    <li>Permite la implementación de programación reactiva</li>
-                    <li>Controlabilidad</li>
-                    <li>Disponibilidad de servicios</li>
-                    <li>Exclusión mutua: nunca más de un proceso está presente en un región crítica</li>
-                    <li>Sin interbloqueo: ningún proceso se retrasa nunca a la espera de un evento que no puede ocurrir</li>
+                    <li>Permite la implementación de programación reactiva.</li>
+                    <li>Controlabilidad.</li>
+                    <li>Disponibilidad de servicios.</li>
+                    <li>Exclusión mutua: nunca más de un proceso está presente en un región crítica.</li>
+                    <li>Sin interbloqueo: ningún proceso se retrasa nunca a la espera de un evento que no puede ocurrir.</li>
                   </ul>
               </div>
             </div>
@@ -2284,25 +2286,23 @@
                 <h2 class="title"><strong>Desventajas</strong></h2>
       
                 <ul>
-                    <li>Permite optimizar el uso de recursos en sistemas mono/multiprocesador.</li>
-                    <li>Fiable administración de los datos en sistemas con gran información</li>
-                    <li>Mejor aprovechamiento de la CPU</li>
-                    <li>Modularidad y reutilización de código</li>
-                    <li>Desarrollo de software más flexible</li>
-                    <li>Permite el desarrollo de aplicaciones que no se vean afectadas en tiempo real</li>
-                    <li>Permite compartir recursos entre tareas lentas y tareas rápidas para que las tareas lentas no retrasen
-                      mucho a las rápidas.</li>
-                    <li>Velocidad de ejecución.</li>
-                    <li>Menores tiempos de respuesta.</li>
-                    <li>Permite la implementación de programación reactiva</li>
-                    <li>Controlabilidad</li>
-                    <li>Disponibilidad de servicios</li>
-                    <li>Exclusión mutua: nunca más de un proceso está presente en un región crítica</li>
-                    <li>Sin interbloqueo: ningún proceso se retrasa nunca a la espera de un evento que no puede ocurrir</li>
+                    <li>Seguridad.</li>
+                    <li>Complejidad.</li>
+                    <li>Depuración y pruebas.</li>
+                    <li>Deadlocks y bloqueos.</li>
+                    <li>Condiciones de carrera.</li>
+                    <li>Consumos de recursos cuando hay excesos de hilos o procesos.</li>
+                    <li>Dificultad de desarrollo.</li>
+                    <li>Dificultad de verificación.</li>
+                    <li>Sobrecarga de Gestión.</li>
+                    <li>Rendimiento Subóptimo.</li>
+                    <li>En programas con pocas instrucciones en mas lento.</li>
+                    <li>Si se aplica mal puede llevar a resultados erroneos.</li>
                   </ul>
               </div>
             </div>
-    
+            <br>
+
     
     </section><!-- #about -->
 
